@@ -1,0 +1,39 @@
+.dialogs{
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  grid-gap: 1em;
+  padding: 5px;
+}
+
+.people{
+  background-color: rgb(204, 248, 248);
+  padding-left: 10px;
+
+  border-radius: 8px 8px 8px 8px;
+  -moz-border-radius: 8px 8px 8px 8px;
+  -webkit-border-radius: 8px 8px 8px 8px;
+  border: 5px solid #78defd;
+}
+.person a{
+  color: rgb(112, 137, 168);
+  text-decoration: none;
+}
+
+.messages{
+
+} 
+
+.message{
+  color:rgb(2, 87, 20);
+  background-color: rgb(170, 250, 167);
+  padding-left: 20px;
+  
+  border-radius: 20px 8px 20px 8px;
+  -moz-border-radius: 20px 8px 20px 8px;
+  -webkit-border-radius: 20px 8px 20px 8px;
+  border: 5px solid #01c21a;
+}
+
+.person a.activeLink{
+  color:rgb(12, 69, 155)
+}

@@ -1,0 +1,16 @@
+.header{
+  grid-area: h;
+  display: grid;
+  background-color: #3be6cf;
+  grid-template-columns: 1fr 10fr;
+ }
+
+ .img{
+  width: 80px
+}
+
+.name{
+  font-size: 40px;
+  font-family: cursive;
+  color: rgb(8, 85, 18);
+}
