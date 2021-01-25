@@ -15,11 +15,11 @@ const PersonPage = () => {
   )
 }
 
-const Profile = () => {
+const Profile = (props) => {
   return (
     <div className={s.content}>
       <PersonPage/>
-      <MyPosts/>
+      <MyPosts dataPost = {props.dataPost}/>
     </div>
   )
 }

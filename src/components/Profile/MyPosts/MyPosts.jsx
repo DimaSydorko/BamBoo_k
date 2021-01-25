@@ -2,14 +2,11 @@ import React from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
 
-let dataPost = [
-  {id:"1", text:"It is my first post.", likes:"20"},
-  {id:"2", text:"How are you?", likes:"15"}
-]
 
-let PostEl = dataPost.map(post => <Post Message={post.text} LikeCount={post.likes}/>)
-
-const MyPosts = () => {
+const MyPosts = (props) => {
+  
+  let PostEl = props.dataPost.map(post => <Post Message={post.text} LikeCount={post.likes}/>)
+  
   return (
     <div className={s.profile}>
     posts
