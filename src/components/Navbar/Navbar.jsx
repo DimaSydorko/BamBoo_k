@@ -18,6 +18,11 @@ const Navbar = (props) => {
       <Page link="/news" name="News"/>
       <Page link="/music" name="Music"/>
       <Page link="/settings" name="Settings"/>
+
+      <div className={s.resentChats}>Recent
+
+        
+      </div>
   </nav>
   )
 }

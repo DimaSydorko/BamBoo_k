@@ -6,15 +6,15 @@ import s from './Dialogs.module.css';
 
 const Dialogs = (props) => {
   
-  let dialogData = props.dataPeople.map(dialog => <Person name={dialog.name} id={dialog.id}/>)
-  let MassageItem = props.dataMessages.map(messages => <Message text={messages.text}/>)
+  let dialogData = props.dataDialogs.PeopleState.map(dialog => <Person name={dialog.name} id={dialog.id} ava={dialog.ava}/>)
+  let MassageItem = props.dataDialogs.MessagesState.map(messages => <Message text={messages.text}/>)
   
   return (
     <div className={s.dialogs}>
       <div className={s.people}>
         {dialogData}
       </div>
-      <div clasname={s.messages}>
+      <div clasName={s.messages}>
         {MassageItem}
       </div>
     </div>

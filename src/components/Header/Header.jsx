@@ -1,10 +1,11 @@
 import React from 'react';
 import s from './Header.module.css';
+import logo from '../../Image/logo_1.png';
 
 const Header = () => {
   return (
       <header className={s.header}>
-        <img className ={s.img} src="https://i.pinimg.com/originals/a7/60/59/a76059460742b8ab6f06196478efc34e.png"></img>
+        <img className ={s.img} src={logo}></img>
         <div className={s.name}>BamBoo k</div>
       </header>
   )

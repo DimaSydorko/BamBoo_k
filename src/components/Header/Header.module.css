@@ -2,11 +2,15 @@
   grid-area: h;
   display: grid;
   background-color: #3be6cf;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr 15fr;
  }
 
  .img{
-  width: 80px
+  position:relative;
+  left: 5%;
+  top: 5%;
+  max-width: 80px;
+  max-height: 50px;
 }
 
 .name{
