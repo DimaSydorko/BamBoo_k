@@ -3,18 +3,20 @@
   display: grid;
   background-color: #3be6cf;
   grid-template-columns: 1fr 15fr;
+  position: fixed;
+  width: 1600px;
  }
 
  .img{
   position:relative;
   left: 5%;
   top: 5%;
-  max-width: 80px;
-  max-height: 50px;
+  max-width: 100px;
+  max-height: 70px;
 }
 
 .name{
-  font-size: 40px;
+  font-size: 55px;
   font-family: cursive;
   color: rgb(8, 85, 18);
 }

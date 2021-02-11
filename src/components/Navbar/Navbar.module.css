@@ -1,14 +1,40 @@
-.nav{
+.nav {
   grid-area: n;
   background-color: #04aa94;
   padding: 20px;
- }
+  height: 800px;
+}
 
- .item a {
-   color: white;
-   text-decoration: none;
- }
+.item a {
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+}
 
- .item a.activeLink{
-   color:rgb(9, 119, 33)
- }
+.item a.activeLink {
+  color: rgb(9, 119, 33)
+}
+
+.resent {
+  position: relative;
+  padding-top: 50px;
+  font-size: 30px;
+}
+
+.avaPerson {
+  position: relative;
+  max-height: 50px;
+  padding: 5px;
+}
+
+.people {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 15px;
+}
+
+.person {
+  flex: 1 1;
+}

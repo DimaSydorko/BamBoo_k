@@ -6,7 +6,11 @@
 }
 
 .userHead{
-  width: 1000px;
+  width: 1325px;
+}
+
+.aboutYouBox {
+  padding: 20px;
 }
 
 .ava{
@@ -15,6 +19,3 @@
   padding: 20px;
 }
 
-.posts{
-  background-color: #8280f8;
-}

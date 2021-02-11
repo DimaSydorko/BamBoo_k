@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import React from 'react';
 import './App.css';
 import Header from './components/Header/Header';
@@ -16,9 +15,11 @@ const App = (props) => {
       <div className='boody'>
         <div className="app-wrapper">
           <Header />
-          <Navbar />
+          <Navbar dataDialogs={props.state.dataDialogsPage.PeopleState}/> 
           <div className='app-wrapper-content'>
-            <Route path='/profile' render={() => <Profile dataPost={props.state.dataProfilePage}/>}/>
+            <Route path='/profile' render={() => <Profile dataPost={props.state.dataProfilePage} 
+                                                          addPost={props.addPost} 
+                                                          updateNewPostInput={props.updateNewPostInput}/>}/>
             <Route path='/dialogs' render={() => <Dialogs dataDialogs={props.state.dataDialogsPage}/>}/>
             <Route path='/news' component={News}/>
             <Route path='/music' component={Music}/>

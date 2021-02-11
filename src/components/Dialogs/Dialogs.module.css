@@ -1,13 +1,17 @@
 .dialogs {
   display: grid;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 1fr 10fr;
+  grid-template-areas: 
+    "people messages"
+    "people write";
   grid-gap: 1em;
   padding: 5px;
 }
 
 .people {
+  grid-area: people;
   background-color: rgb(204, 248, 248);
-  padding-left: 10px;
+  padding-left: 5px;
 
   border-radius: 8px 8px 8px 8px;
   -moz-border-radius: 8px 8px 8px 8px;
@@ -16,31 +20,63 @@
 }
 
 .person a {
+  display: flex;
   color: rgb(112, 137, 168);
   text-decoration: none;
+  top: 200px;
 }
 
 .avaPerson {
   position: relative;
-  top: 9px;
-  max-height: 20px;
-  padding: 5px;
+  max-height: 50px;
+  padding: 7px;
+}
 
+.name {
+  padding-top: 20px;
+}
+
+.overMessage {
+  grid-area: message;
+  padding: 5px;
 }
 
 .message {
-  /* background-image: url("../../Image/MassegeBamboo.png"); */
+  display: flex;
 
-  color: rgb(2, 87, 20);
-  background-color: rgb(170, 250, 167);
+  /* background-image: url("../../Image/MassegeBamboo.png"); */
   padding-left: 20px;
 
   border-radius: 20px 8px 20px 8px;
   -moz-border-radius: 20px 8px 20px 8px;
   -webkit-border-radius: 20px 8px 20px 8px;
-  border: 5px solid #01c21a;
+  border: 3px solid #01c21a;
+  background-color: rgb(170, 250, 167);
+}
+
+.messageYou {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  padding-left: 20px;
+  
+
+  background-color: rgb(167, 237, 250);
+  border-radius: 20px 8px 20px 8px;
+  -moz-border-radius: 20px 8px 20px 8px;
+  -webkit-border-radius: 20px 8px 20px 8px;
+  border: 3px solid #0185c2;
+}
+
+.massegeText{
+  padding-right: 20px;
 }
 
 .person a.activeLink {
   color: rgb(12, 69, 155)
+}
+
+
+.addMessage {
+  grid-area: write;
 }

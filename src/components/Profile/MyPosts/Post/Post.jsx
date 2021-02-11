@@ -3,14 +3,16 @@ import s from './Post.module.css';
 
 const Post = (props) => {
   return (
-    <div className={s.post}>
-      Post:
+    <div className={s.postBox}>
+      <div className={s.post}>
+        Post:
+          <div>
+            {props.Message}
+          </div>
         <div>
-          {props.Message}
+          <span>like: {props.LikeCount} </span>
         </div>
-      <div>
-        <span>like: {props.LikeCount} </span>
-      </div>
+    </div>
   </div>
   )
 }
