@@ -21,8 +21,7 @@ const Profile = (props) => {
       <PersonPage/>
       <MyPosts dataPost={props.dataPost.PostState} 
                 NewPostInput={props.dataPost.NewPostInput} 
-                addPost={props.addPost} 
-                updateNewPostInput={props.updateNewPostInput}/>
+                dispatch={props.dispatch}/>
     </div>
   )
 }
