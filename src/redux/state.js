@@ -1,7 +1,11 @@
+const ADD_MESSAGE = 'ADD-MESSAGE'
+const UPDATE_NEW_MESSAGE_INPUT = 'UPDATE-NEW-MESSAGE-INPUT'
+const ADD_POST = 'ADD-POST'
+const UPDATE_NEW_POST_INPUT = 'UPDATE-NEW-POST-INPUT'
+
 let store = {
-  getState() {
-    return this._state
-  },
+  getState() {return this._state},
+  subscribe(check) {this._rerenderEntireTree = check},
 
   _rerenderEntireTree() {},
 
@@ -74,10 +78,11 @@ let store = {
           text: "Hi I'm here",
           from: "you"
         }
-      ]
+      ],
+
+      NewMessageInput: 'Some Text'
     }
   },
-
 
   _addPost() {
     let newPost = {
@@ -95,20 +100,42 @@ let store = {
     this._rerenderEntireTree(this._state)
   },
 
-  subscribe(check) {
-    this._rerenderEntireTree = check
+
+  _addMessage() {
+    let newMessage={
+      id: '5', 
+      text: this._state.dataDialogsPage.NewMessageInput,
+      from: "you"
+    }
+    this._state.dataDialogsPage.MessagesState.push(newMessage)
+    this._state.dataDialogsPage.NewMessageInput = ''
+    this._rerenderEntireTree(this._state)
+  },
+
+  _updateNewMessageInput(newMessageText) {
+    this._state.dataDialogsPage.NewMessageInput = newMessageText
+    this._rerenderEntireTree(this._state)
   },
 
   dispatch(action) {
-    debugger;
     if (action.type === 'ADD-POST') {
       this._addPost()
     } else if (action.type === 'UPDATE-NEW-POST-INPUT') {
       this._updateNewPostInput(action.newText)
+    } else if (action.type === 'ADD-MESSAGE') {
+      this._addMessage()
+    } else if (action.type === 'UPDATE-NEW-MESSAGE-INPUT') {
+      this._updateNewMessageInput(action.newMessageText)
     }
   }
 }
 
+export const addMessageActionCreator = () => ({type: ADD_MESSAGE})
+export const updateNewMessageImputActionCreator = (newMessageInput) =>
+  ({type: UPDATE_NEW_MESSAGE_INPUT, newMessageText: newMessageInput})
+
+export const addPostActionCreator = () => ({type: ADD_POST})
+export const updateNewPostImputActionCreator = (text) => 
+  ({type: UPDATE_NEW_POST_INPUT, newText: text})
 
 export default store;
-window.store = store
