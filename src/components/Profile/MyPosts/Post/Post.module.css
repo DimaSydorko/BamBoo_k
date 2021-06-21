@@ -1,4 +1,9 @@
+.postBox {
+  padding: 10px;
+}
 .post{
   grid-area: t;
   background-color: #b2b1fd;
+  border: 5px solid  #605eda;
 }
+

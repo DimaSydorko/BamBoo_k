@@ -1,22 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 
 .boody{
-  background: url("Image/geometricLeaves.png");
+  background: url("Image/geometricLeaves.png") fixed;
+  padding-bottom: 10vw;  
   font-family: 'Audiowide';
-  font-weight: 500;
-  font-size: 20px;
-  padding-bottom: 400px;
+  font-size:large;
 }
 
 .app-wrapper{
   margin: 0 auto;
   display: grid;
-  width: 1200px;
+  width: 1600px;
   grid-template-areas: 
   "h h"
   "n c";
 
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: 80px 1fr;
   grid-template-columns: 2fr 10fr;
   grid-gap: 1em;
 }
