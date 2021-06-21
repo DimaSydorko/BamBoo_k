@@ -7,7 +7,7 @@
   grid-gap: 1em;
   padding: 5px;
 }
-
+ 
 .people {
   grid-area: people;
   background-color: rgb(204, 248, 248);
@@ -43,8 +43,6 @@
 
 .message {
   display: flex;
-
-  /* background-image: url("../../Image/MassegeBamboo.png"); */
   padding-left: 20px;
 
   border-radius: 20px 8px 20px 8px;
@@ -76,7 +74,40 @@
   color: rgb(12, 69, 155)
 }
 
-
 .addMessage {
   grid-area: write;
+}
+
+
+.addMessageButton button {
+  background-color: #8cbdba; 
+  border: 2px solid #5a6d5b;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.addMessageButton button:hover {
+  background-color: #439ba7;
+  color: white;
+}
+.addMessageButton button:disabled {
+  background-color: #b88181;
+  color: rgb(203, 240, 234);
+}
+
+.inputMessageArea{
+  font-size: large;
+  width: 100%;
+  padding: 8px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }

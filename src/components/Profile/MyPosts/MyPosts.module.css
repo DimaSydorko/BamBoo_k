@@ -23,8 +23,12 @@
   background-color: #43a743;
   color: white;
 }
+.addPostButton button:disabled {
+  background-color: #9ed3c1;
+  color: rgb(112, 165, 156);
+}
 
-.inputPostArea textarea{
+.inputPostArea{
   font-size: large;
   width: 100%;
   padding: 12px 20px;

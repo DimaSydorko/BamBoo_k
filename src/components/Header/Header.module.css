@@ -1,6 +1,6 @@
 .header{
   grid-area: h;
-  display: grid;
+  display: flex;
   background-color: #3be6cf;
   grid-template-columns: 1fr 15fr;
   position: fixed;
@@ -9,8 +9,6 @@
 
  .img{
   position:relative;
-  left: 5%;
-  top: 5%;
   max-width: 100px;
   max-height: 70px;
 }
@@ -19,4 +17,18 @@
   font-size: 55px;
   font-family: cursive;
   color: rgb(8, 85, 18);
+}
+
+.loginBlock{
+  position:relative;
+  padding: 10px;
+  left: 75%;
+  color: rgb(0, 0, 0);
+}
+
+.logout{
+  position:relative;
+  top: 20px;
+  right: 50%;
+  color: rgb(221, 19, 19);
 }
