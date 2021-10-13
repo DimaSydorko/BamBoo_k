@@ -1,11 +1,11 @@
 import { authAPI } from "../components/api/authApi"
-import { BaseThynkType, inferActiosTypes as InferActiosTypes } from "./redux-store"
+import { BaseThunkType, inferActiosTypes as InferActiosTypes } from "./redux-store"
 import { securityAPI } from '../components/api/securityApi';
 import { ResultCodesEnum, ResultCodesForCaptchaEnum } from "../components/api/api";
 
 type InitialeStateType = typeof initialState
 type ActionsType = InferActiosTypes<typeof actions>
-type ThunkType = BaseThynkType<ActionsType>
+type ThunkType = BaseThunkType<ActionsType>
 
 let initialState = {   
   userId: null as number | null,

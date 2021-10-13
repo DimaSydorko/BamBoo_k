@@ -16,6 +16,7 @@ export const MyInput: React.FC<MyInputType> =({label, ...props}) => {
     <div className={styles.formControl}>
       <label htmlFor={props.id || props.name}>{label}</label>
       <input {...field} {...props}/>
+      
         {meta.touched && meta.error ? (
           <div className={styles.error}>{meta.error}</div>
         ):null}  

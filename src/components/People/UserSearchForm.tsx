@@ -17,7 +17,6 @@ const UserSearchForm: React.FC<PropsType> = React.memo((props) => {
       term: values.term,
       friend: values.friend === "null" ? null : values.friend === "true" ? true : false
     }
-
     props.onFilterChanged(filter)
     setSubmitting(false)
   }
@@ -25,7 +24,6 @@ const UserSearchForm: React.FC<PropsType> = React.memo((props) => {
   return <>
     <Formik 
       initialValues={{term: '', friend: "null"}}
-      validationSchema={{}}
       onSubmit={submit}>
     
         {({handleSubmit}) => (
@@ -40,7 +38,7 @@ const UserSearchForm: React.FC<PropsType> = React.memo((props) => {
                 name={"term"}
                 placeholder={"Search..."}
               />
-              <button>Search</button>
+              <button type='submit'>Search</button>
           </Form>
         )}
     </Formik>

@@ -2,12 +2,12 @@ import { ResultCodesEnum } from "../components/api/api"
 import { usersAPI } from "../components/api/userApi"
 import { userType } from "../types/types"
 import { updateObjectInArray } from "../utils/objectHelpers"
-import { BaseThynkType, inferActiosTypes } from "./redux-store"
+import { BaseThunkType, inferActiosTypes } from "./redux-store"
 
 type initialaseStateType = typeof initialaseState
 export type FilterType = typeof initialaseState.filter
 type actionsType = inferActiosTypes<typeof actions>
-type thunkType = BaseThynkType<actionsType>
+type thunkType = BaseThunkType<actionsType>
 
 let initialaseState = {   
   users: [] as Array<userType>,
@@ -77,17 +77,17 @@ export const actions = {
 
 
 export const requestUsers = (page: number, pageSize: number, filter: FilterType): thunkType => {
-    return async (dispatch) => {
-      dispatch(actions.toggleIsFeching(true))
-      dispatch(actions.setPage(page))
-      dispatch(actions.setFilter(filter))
+  return async (dispatch) => {
+    dispatch(actions.toggleIsFeching(true))
+    dispatch(actions.setPage(page))
+    dispatch(actions.setFilter(filter))
 
-      let data = await usersAPI.getUsers(page, pageSize, filter.term, filter.friend)
-      dispatch(actions.toggleIsFeching(false))
-      dispatch(actions.setUsers(data.items))
-      dispatch(actions.setTotalUsersCount(data.totalCount))
-    }
+    let data = await usersAPI.getUsers(page, pageSize, filter.term, filter.friend)
+    dispatch(actions.toggleIsFeching(false))
+    dispatch(actions.setUsers(data.items))
+    dispatch(actions.setTotalUsersCount(data.totalCount))
   }
+}
 
 const _followUnfollowFlow = async (dispatch: any, userId: number, apiMethod: any, 
   actionCreator: (userId: number) => actionsType) => {

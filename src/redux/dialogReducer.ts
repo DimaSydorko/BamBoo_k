@@ -1,4 +1,4 @@
-import { BaseThynkType, inferActiosTypes } from "./redux-store"
+import { BaseThunkType, inferActiosTypes } from "./redux-store"
 
 type PeopleStateType = {
   id: number
@@ -63,7 +63,7 @@ let initialaseState = {
 }
 export type initialaseStateType = typeof initialaseState
 type ActionsType = inferActiosTypes<typeof actions>
-export type thunkType = BaseThynkType<ActionsType>
+export type thunkType = BaseThunkType<ActionsType>
 
 const dialogReducer = (state = initialaseState, action: ActionsType):initialaseStateType => {
   switch (action.type) {

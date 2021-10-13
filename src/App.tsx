@@ -10,9 +10,10 @@ import { initializeApp } from './redux/appReducer';
 import Preloader from './components/common/Preloader';
 import { withSuspense } from './components/hoc/withSuspense';
 import { AppStateType } from './redux/redux-store';
+import { UsersPage } from './components/People/UsersPage';
 const ProfileContainer = React.lazy(() => import ('./components/Profile/ProfileContainer'))
 const DialogsContainer = React.lazy(() => import ('./components/Dialogs/DialogsContainer'))
-const PeopleContainer = React.lazy(() => import ('./components/People/PeopleContainer'))
+const ChatPage = React.lazy(() => import ('./pages/Chat/ChatPage'))
 
 type MapPropsType = ReturnType<typeof mapStateToProps>
 type DispatchPropsType = {
@@ -21,7 +22,7 @@ type DispatchPropsType = {
 
 const SuspendedProfile = withSuspense(ProfileContainer)
 const SuspendedDialogs = withSuspense(DialogsContainer)
-const SuspendedPeaple = withSuspense(PeopleContainer)
+const SuspendedChatPage = withSuspense(ChatPage)
 
 class App extends Component<MapPropsType & DispatchPropsType> {
   catchAllUnhandledErrors = (e: PromiseRejectionEvent) => {
@@ -50,8 +51,9 @@ class App extends Component<MapPropsType & DispatchPropsType> {
             <Switch>
               <Route path='/profile/:userId?' render={() => <SuspendedProfile/>}/>
               <Route path='/dialogs' render={() => <SuspendedDialogs/>}/> 
-              <Route path='/people' render={() => <SuspendedPeaple/>}/>
+              <Route path='/people' render={() => <UsersPage/>}/>
               <Route path='/login' render={() => <Login/>}/>
+              <Route path='/chat' render={() => <SuspendedChatPage/>}/>
               <Route path='*' render={() => <div>404 NOT FOUND</div>}/>
             </Switch>
           </div>

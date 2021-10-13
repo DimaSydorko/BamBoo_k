@@ -1,6 +1,6 @@
-import React, {useState, useEffect, ChangeEvent} from 'react';
+import React, {useState, useEffect, ChangeEvent} from 'react'
 
-type ProfileStatusWithHooksPropsType = {
+export type ProfileStatusWithHooksPropsType = {
   status: string | null
   updateStatus: (status: string) => void
 }
@@ -46,4 +46,4 @@ const ProfileStatusWithHooks: React.FC<ProfileStatusWithHooksPropsType> = (props
   )
 }
 
-export default ProfileStatusWithHooks;
+export default ProfileStatusWithHooks

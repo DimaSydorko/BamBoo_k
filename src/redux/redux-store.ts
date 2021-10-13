@@ -5,13 +5,15 @@ import dialogReducer from "./dialogReducer";
 import peopleReducer from "./peopleReducer";
 import profileReducer from "./profileReducer";
 import appReducer from "./appReducer";
+import chatReducer from "./chatReducer";
 
 let rootReducer = combineReducers({
   profilePage: profileReducer,
   dialogsPage: dialogReducer,
   peoplePage: peopleReducer,
   auth: authReducer,
-  app: appReducer
+  app: appReducer,
+  chat: chatReducer
 })
 
 // @ts-ignore
@@ -25,4 +27,4 @@ export default store
 type rootReducerType = typeof rootReducer
 export type AppStateType = ReturnType<rootReducerType>
 export type inferActiosTypes<T> = T extends  {[keys: string]: (...args: any[]) => infer U } ? U : never
-export type BaseThynkType<A extends Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>
+export type BaseThunkType<A extends Action, R = Promise<void>> = ThunkAction<R, AppStateType, unknown, A>

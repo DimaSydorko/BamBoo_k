@@ -1,9 +1,9 @@
 import { postType, profileType, photosType} from './../types/types';
-import { BaseThynkType, inferActiosTypes } from './redux-store';
+import { BaseThunkType, inferActiosTypes } from './redux-store';
 import { profileAPI } from '../components/api/profileApi.ts';
 
 type ActionsType = inferActiosTypes<typeof actions>
-type ThunkType = BaseThynkType<ActionsType>
+type ThunkType = BaseThunkType<ActionsType>
 export type InitialaseStateType = typeof  initialaseState
 
 let initialaseState = {

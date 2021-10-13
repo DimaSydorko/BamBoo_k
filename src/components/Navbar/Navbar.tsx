@@ -20,6 +20,7 @@ const Navbar = () => {
       <Page link="/profile" name="Profile"/>
       <Page link="/dialogs" name="Mesages"/>
       <Page link="/people" name="People"/>
+      <Page link="/chat" name="Chat"/>
       <Page link="/news" name="News"/>
       <Page link="/music" name="Music"/>
       <Page link="/settings" name="Settings"/>

@@ -3,7 +3,7 @@ import loaderIMG from '../../Image/loading.svg'
 
 let Preloader = () => {
   return <div>
-    <img src={loaderIMG}/>
+    <img src={loaderIMG} alt=''/>
   </div>
 } 
 export default Preloader

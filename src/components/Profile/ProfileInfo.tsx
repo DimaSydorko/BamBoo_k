@@ -6,7 +6,7 @@ import ProfileStatusWithHooks from './ProfileStatusWithHooks';
 import userPhoto from './../../Image/ava/FrendAva.png';
 import ProfileDataForm from './ProfileDataForm';
 import { ProfilePropsType } from './Profile';
-import { ContactsType as ContactsType, profileType } from '../../types/types';
+import { ContactsType, profileType } from '../../types/types';
 
 type ProfileDataPropsType = {
   profile: profileType
@@ -38,11 +38,11 @@ const ProfileInfo: React.FC<ProfilePropsType> = ({isOwner, profile, status, upda
   
   return<>
     <div>
-      <img className = {styles.userHead} src={profileHeader} alt=""></img>
+      <img className = {styles.userHead} src={profileHeader} alt=''></img>
     </div>
     <div className={styles.aboutYouBox}>
       <div>
-        <img className={styles.ava} src={profile.photos.large || userPhoto}/>
+        <img className={styles.ava} src={profile.photos.large || userPhoto} alt=''/>
         {isOwner && <input type={"file"} onChange={onMainPhotoSelected}/>}
       </div>
       <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>

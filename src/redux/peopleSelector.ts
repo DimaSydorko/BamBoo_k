@@ -5,8 +5,7 @@ const getUsersSelector = (state: AppStateType) => {
   return state.peoplePage.users
 }
 
-export const getUsers = createSelector(getUsersSelector, 
-  (users) => {
+export const getUsers = createSelector(getUsersSelector, (users) => {
   return users.filter(u => true)
 })
 

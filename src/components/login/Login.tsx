@@ -95,7 +95,7 @@ const Login: React.FC<mapStateToPropsType & MapDispatchToPropstype> = (props) =>
             </div>
             {props.captchaUrl && 
             <div>
-              <img src={props.captchaUrl}/>
+              <img src={props.captchaUrl} alt=''/>
               <div>
                 <MyInput
                   name="captcha"
